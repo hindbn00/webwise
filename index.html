@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebWise | Agence web en Algérie</title>
+<meta name="description" content="WebWise crée votre boutique YouCan, site vitrine, landing page et lance vos campagnes sponsorisées en Algérie.">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#16226b;--navy-d:#0f1850;--teal:#2c8aa8;--sky:#eaf3f8;--ink:#14204f;--muted:#5a6788;--white:#fff}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Cairo,system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;color:var(--ink);background:var(--white);line-height:1.7;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:5;background:var(--white);border-bottom:1px solid #dfe7ef}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.brand{font-weight:800;font-size:1.6rem;text-decoration:none;color:var(--navy);letter-spacing:.02em;direction:ltr}
+.brand span{color:var(--teal)}
+.menu{display:flex;gap:26px;align-items:center}
+.menu a{text-decoration:none;font-weight:600;font-size:.95rem}
+.menu a:hover{color:var(--teal)}
+.flags{display:flex;gap:8px}
+.flags button{padding:0;border:2px solid transparent;background:none;border-radius:6px;cursor:pointer;line-height:0;opacity:.55;transition:opacity .15s}
+.flags button svg{width:34px;height:23px;border-radius:4px;box-shadow:0 0 0 1px #c9d4e0}
+.flags button[aria-pressed=true]{opacity:1;border-color:var(--teal)}
+.btn{display:inline-block;background:var(--teal);color:#fff;padding:12px 26px;border-radius:12px;text-decoration:none;font-weight:700;font-family:inherit;font-size:1rem;border:0;cursor:pointer}
+.btn:hover{background:#237390}
+.btn.light{background:var(--white);color:var(--navy)}
+.btn.light:hover{background:var(--sky)}
+.hero{background:var(--navy);color:#fff;padding:76px 0}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.2;font-weight:800}
+.hero p{margin:20px 0 30px;color:#c9d6f2;font-size:1.1rem;max-width:32em}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero .btn.ghost{background:none;border:2px solid #7f93d6;color:#fff}
+.hero .btn.ghost:hover{background:#ffffff18}
+.logo-card{background:#fff;border-radius:24px;padding:18px;max-width:340px;margin-inline:auto}
+.logo-card img{width:100%;height:auto;display:block}
+section{padding:76px 0}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1.25;color:var(--navy);font-weight:800;margin-bottom:10px}
+.sub{color:var(--muted);max-width:36em;margin-bottom:38px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{border:2px solid #d6e2ee;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:8px;background:#fff}
+.card h3{font-size:1.3rem;color:var(--navy)}
+.card p{color:var(--muted);font-size:.98rem;flex:1}
+.price{font-size:2.1rem;font-weight:800;color:var(--teal);line-height:1.2;margin:8px 0 12px}
+.price small{font-size:1rem;font-weight:600;color:var(--muted)}
+.card .btn{text-align:center}
+.card.main{border-color:var(--navy);background:var(--navy);color:#fff}
+.card.main h3{color:#fff}.card.main p{color:#c9d6f2}.card.main .price{color:#fff}.card.main .price small{color:#c9d6f2}
+.card.main .btn{background:#fff;color:var(--navy)}
+.ads{background:var(--sky)}
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pack{position:relative;text-align:center;align-items:stretch}
+.pack .days{font-size:1.5rem;font-weight:800;color:var(--navy)}
+.pack.pop{border-color:var(--teal);border-width:3px}
+.tag{position:absolute;top:-14px;inset-inline:0;margin-inline:auto;width:max-content;background:var(--teal);color:#fff;font-size:.8rem;font-weight:700;padding:2px 14px;border-radius:99px}
+.contact{background:var(--navy);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact .sub{margin-inline:auto;color:#c9d6f2}
+.contact .actions{justify-content:center}
+.contact .btn.ghost{background:none;border:2px solid #7f93d6;color:#fff}
+.contact .btn.ghost:hover{background:#ffffff18}
+.contact .info{margin-top:26px;color:#c9d6f2;direction:ltr}
+footer{background:var(--navy-d);color:#9fb0dd;padding:22px 0;text-align:center;font-size:.9rem}
+@media (max-width:820px){
+ .hero .wrap,.grid,.packs{grid-template-columns:1fr}
+ .logo-card{max-width:190px;padding:12px;order:-1;margin-inline:0}
+ .menu a{display:none}
+ .hero{padding:32px 0 40px}
+ .hero .wrap{gap:22px}
+ h1{font-size:1.85rem;line-height:1.3}
+ .hero p{font-size:1rem;margin:14px 0 22px}
+ .hero .btn{padding:11px 20px}
+ section{padding:48px 0}
+ .card{padding:22px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1097123706019704');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1097123706019704&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+<header><div class="wrap nav">
+ <a class="brand" href="#top">WEB<span>WISE</span></a>
+ <nav class="menu" aria-label="Menu">
+  <a href="#services" data-ar="الخدمات">Services</a>
+  <a href="#packs" data-ar="الإعلانات">Sponsoring</a>
+  <a href="#contact" data-ar="اتصل بنا">Contact</a>
+ </nav>
+ <div class="flags" role="group" aria-label="Langue / اللغة">
+  <button id="btn-ar" aria-label="العربية" title="العربية" aria-pressed="false">
+   <svg viewBox="0 0 30 20"><rect width="15" height="20" fill="#006233"/><rect x="15" width="15" height="20" fill="#fff"/><circle cx="15" cy="10" r="5" fill="#d21034"/><circle cx="16.4" cy="10" r="4.1" fill="#fff"/><polygon fill="#d21034" points="17.2,7.8 17.73,9.27 19.29,9.32 18.06,10.28 18.49,11.78 17.2,10.9 15.91,11.78 16.34,10.28 15.11,9.32 16.67,9.27"/></svg>
+  </button>
+  <button id="btn-fr" aria-label="Français" title="Français" aria-pressed="true">
+   <svg viewBox="0 0 30 20"><rect width="10" height="20" fill="#0055a4"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ef4135"/></svg>
+  </button>
+ </div>
+</div></header>
+
+<main id="top">
+ <div class="hero"><div class="wrap">
+  <div>
+   <h1 data-ar="نصنع موقعك ومتجرك الإلكتروني ونوصلك إلى زبائنك في الجزائر">Votre site, votre boutique en ligne, et vos clients en Algérie.</h1>
+   <p data-ar="WebWise وكالة ويب جزائرية: متاجر YouCan، مواقع للمؤسسات، صفحات هبوط وحملات إعلانية ممولة، بأسعار واضحة.">WebWise est une agence web algérienne : boutiques YouCan, sites vitrines, landing pages et campagnes sponsorisées, à des prix clairs.</p>
+   <div class="actions">
+    <a class="btn light" data-cta="Devis" href="#" data-ar="اطلب عرض سعر">Demander un devis</a>
+    <a class="btn ghost" href="#services" data-ar="شاهد الأسعار">Voir les tarifs</a>
+   </div>
+  </div>
+  <div class="logo-card"><img src="logo.jpg" alt="WebWise" width="568" height="452"></div>
+ </div></div>
+
+ <section id="services"><div class="wrap">
+  <h2 data-ar="خدماتنا">Nos services</h2>
+  <p class="sub" data-ar="أسعار ثابتة ومعلنة، بدون مفاجآت.">Des prix fixes et affichés, sans surprise.</p>
+  <div class="grid">
+   <article class="card main">
+    <h3 data-ar="موقع تعريفي للمؤسسات">Site vitrine</h3>
+    <p data-ar="موقع احترافي للشركات، الأطباء، المقاهي، المطاعم وغيرها. يعرّف بنشاطك ويسهّل على الزبائن التواصل معك.">Un site professionnel pour entreprises, médecins, cafétérias, restaurants, etc. Il présente votre activité et facilite le contact avec vos clients.</p>
+    <div class="price" data-ar="18000 دج">18 000 DA</div>
+    <a class="btn" data-cta="Site vitrine" href="#" data-ar="اطلب الآن">Commander</a>
+   </article>
+   <article class="card">
+    <h3 data-ar="متجر إلكتروني على YouCan">Boutique en ligne sur YouCan</h3>
+    <p data-ar="متجر جاهز لعرض منتجاتك وتلقي الطلبات، مع تصميم مرتب وسهل الاستخدام على الهاتف.">Une boutique prête à présenter vos produits et recevoir des commandes, avec un design soigné et simple sur mobile.</p>
+    <div class="price" data-ar="4500 دج">4 500 DA</div>
+    <a class="btn" data-cta="Boutique YouCan" href="#" data-ar="اطلب الآن">Commander</a>
+   </article>
+   <article class="card">
+    <h3 data-ar="صفحة هبوط">Landing page</h3>
+    <p data-ar="صفحة واحدة مركّزة لبيع منتج أو خدمة أو جمع طلبات الزبائن.">Une page unique et efficace pour vendre un produit, une offre ou collecter des demandes clients.</p>
+    <div class="price" data-ar="2500 دج">2 500 DA</div>
+    <a class="btn" data-cta="Landing page" href="#" data-ar="اطلب الآن">Commander</a>
+   </article>
+   <article class="card">
+    <h3 data-ar="سيناريو + تعليق صوتي بالذكاء الاصطناعي">Script + voix off IA</h3>
+    <p data-ar="نكتب لك نص الفيديو الإعلاني ونسجّله بصوت اصطناعي واضح، جاهز للنشر.">Nous rédigeons le script de votre vidéo publicitaire et l'enregistrons avec une voix IA claire, prête à publier.</p>
+    <div class="price" data-ar="500 دج">500 DA</div>
+    <a class="btn" data-cta="Script + voix off IA" href="#" data-ar="اطلب الآن">Commander</a>
+   </article>
+  </div>
+ </div></section>
+
+ <section id="packs" class="ads"><div class="wrap">
+  <h2 data-ar="باقات الإعلانات الممولة">Packs sponsoring</h2>
+  <p class="sub" data-ar="نطلق ونتابع حملتك الإعلانية على مدى المدة التي تختارها.">Nous lançons et suivons votre campagne sponsorisée pendant la durée de votre choix.</p>
+  <div class="packs">
+   <article class="card pack">
+    <div class="days" data-ar="3 أيام">3 jours</div>
+    <div class="price" data-ar="3500 دج">3 500 DA</div>
+    <p data-ar="مناسبة لتجربة إعلان أو الترويج لعرض قصير.">Idéal pour tester une annonce ou promouvoir une offre courte.</p>
+    <a class="btn" data-cta="Pack sponsoring 3 jours" href="#" data-ar="اختر الباقة">Choisir ce pack</a>
+   </article>
+   <article class="card pack pop">
+    <span class="tag" data-ar="الأكثر طلبا">Le plus choisi</span>
+    <div class="days" data-ar="5 أيام">5 jours</div>
+    <div class="price" data-ar="5500 دج">5 500 DA</div>
+    <p data-ar="مدة أطول للوصول إلى عدد أكبر من الزبائن.">Une durée plus longue pour toucher davantage de clients.</p>
+    <a class="btn" data-cta="Pack sponsoring 5 jours" href="#" data-ar="اختر الباقة">Choisir ce pack</a>
+   </article>
+   <article class="card pack">
+    <div class="days" data-ar="10 أيام">10 jours</div>
+    <div class="price" data-ar="10000 دج">10 000 DA</div>
+    <p data-ar="حملة كاملة لبناء حضور قوي لنشاطك.">Une campagne complète pour installer durablement votre activité.</p>
+    <a class="btn" data-cta="Pack sponsoring 10 jours" href="#" data-ar="اختر الباقة">Choisir ce pack</a>
+   </article>
+  </div>
+ </div></section>
+
+ <section id="contact" class="contact"><div class="wrap">
+  <h2 data-ar="لنبدأ مشروعك">Parlons de votre projet</h2>
+  <p class="sub" data-ar="راسلنا على ماسنجر أو واتساب وسنرد عليك بسرعة.">Écrivez-nous sur Messenger ou WhatsApp, nous vous répondons rapidement.</p>
+  <div class="actions"><a class="btn light" data-cta="Contact" href="#" data-ar="تواصل عبر ماسنجر">Contacter sur Messenger</a><a class="btn ghost" dir="ltr" href="https://wa.me/213774129401" target="_blank" rel="noopener">WhatsApp 0774 12 94 01</a></div>
+ </div></section>
+</main>
+
+<footer><div class="wrap">© <span id="y"></span> WebWise. <span data-ar="جميع الحقوق محفوظة.">Tous droits réservés.</span></div></footer>
+
+<script>
+// Messenger link of your Facebook page (buttons open a chat with your page)
+var MESSENGER="https://m.me/61557537533407";
+document.getElementById("y").textContent=new Date().getFullYear();
+
+// Messenger buttons + Meta Pixel events
+document.querySelectorAll("[data-cta]").forEach(function(a){
+ a.href=MESSENGER;a.target="_blank";a.rel="noopener";
+ a.addEventListener("click",function(){
+  if(typeof fbq!=="function")return;
+  var card=a.closest(".card"),p=card&&card.querySelector(".price");
+  var v=p?parseInt(p.textContent.replace(/\D/g,""),10):0;
+  if(v){
+   // Buttons on a priced card: Purchase with the price as value
+   fbq("track","Purchase",{value:v,currency:"DZD",content_name:a.dataset.cta});
+  }else{
+   // Buttons with no price (hero quote + contact section): Contact
+   fbq("track","Contact",{content_name:a.dataset.cta});
+  }
+ });
+});
+
+// WhatsApp button
+var wa=document.querySelector('a[href^="https://wa.me"]');
+if(wa)wa.addEventListener("click",function(){
+ if(typeof fbq==="function")fbq("track","Contact",{content_name:"WhatsApp"});
+});
+
+var els=document.querySelectorAll("[data-ar]");
+els.forEach(function(e){e.dataset.fr=e.innerHTML});
+var titles={fr:"WebWise | Agence web en Algérie",ar:"WebWise | وكالة ويب في الجزائر"};
+function setLang(l){
+ var h=document.documentElement;
+ h.lang=l;h.dir=l==="ar"?"rtl":"ltr";
+ els.forEach(function(e){e.innerHTML=l==="ar"?e.dataset.ar:e.dataset.fr});
+ document.title=titles[l];
+ document.getElementById("btn-ar").setAttribute("aria-pressed",l==="ar");
+ document.getElementById("btn-fr").setAttribute("aria-pressed",l==="fr");
+ try{localStorage.setItem("lang",l)}catch(e){}
+}
+document.getElementById("btn-ar").onclick=function(){setLang("ar")};
+document.getElementById("btn-fr").onclick=function(){setLang("fr")};
+var saved="fr";try{saved=localStorage.getItem("lang")||"fr"}catch(e){}
+if(saved==="ar")setLang("ar");
+</script>
+</body>
+</html>
