@@ -179,15 +179,8 @@ document.querySelectorAll("[data-cta]").forEach(function(a){
  a.href=MESSENGER;a.target="_blank";a.rel="noopener";
  a.addEventListener("click",function(){
   if(typeof fbq!=="function")return;
-  var card=a.closest(".card"),p=card&&card.querySelector(".price");
-  var v=p?parseInt(p.textContent.replace(/\D/g,""),10):0;
-  if(v){
-   // Buttons on a priced card: Purchase with the price as value
-   fbq("track","Purchase",{value:v,currency:"DZD",content_name:a.dataset.cta});
-  }else{
-   // Buttons with no price (hero quote + contact section): Contact
-   fbq("track","Contact",{content_name:a.dataset.cta});
-  }
+  // Every Messenger button: Contact event
+  fbq("track","Contact",{content_name:a.dataset.cta});
  });
 });
 
